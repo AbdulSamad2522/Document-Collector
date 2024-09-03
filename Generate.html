@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="jquery.qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="form-container mx-auto">
+        <h2 class="text-center mb-4">Generate Code</h2>
+
+        <!-- Step Indicator -->
+        <div class="step-indicator d-none d-lg-block">
+            <div class="box-l">
+                <div><span class="bg-success">1</span> Personal Information</div>
+            <div><span class="bg-success">2</span> Education Information</div>
+            <div><span class="bg-success">3</span> Submit Application</div>
+            <div><span class="bg-primary">4</span> Generate Code</div>
+            </div>
+        </div>
+        <div class="step-indicator d-block d-lg-none">
+            <div class="box d-flex justify-content-between">
+                    <div style="font-size: 0.6rem;"><span class="bg-success" style="height: 25px;">1</span> </div>
+                <div style="font-size: 0.6rem;"><span class="bg-success" style="height: 25px;">2</span> </div>
+                <div style="font-size: 0.6rem;"><span class="bg-success" style="height: 25px; padding-top: 2px;">3</span></div>
+                <div style="font-size: 0.6rem;"><span class="bg-primary" style="height: 25px; padding-top: 2px;">4</span></div>
+                </div>
+        </div>
+        <!-- resume -->
+         <div class="row mb-4">
+            <div class="col-md-3 col-6 text-center template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/383/persistent-resource/santiago-resume-templates.jpg" alt="">
+                <a href="resume.html" id="resume-genrate" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/142/persistent-resource/oslo-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/1882/persistent-resource/chicago-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/2212/persistent-resource/rio-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+         </div>
+         <div class="row mb-4">
+            <div class="col-md-3 col-6 text-center template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/487/persistent-resource/vancouver-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/3367/persistent-resource/toronto-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/441/persistent-resource/sydney-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/1519/persistent-resource/moscow-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+         </div>
+         <div class="row mb-4" >
+            <div class="col-md-3 col-6 text-center template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/3075/persistent-resource/rome-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/1828/persistent-resource/copenhagen-resume-templates.jpg" alt="">
+                <a href="resume.html"  class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/2740/persistent-resource/lisbon-resume-templates.jpg" alt="">
+                <a href="resume.html"  class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/499/persistent-resource/tokyo-resume-templates.jpg" alt="">
+                <a href="resume.html"  class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+          
+         </div>
+        
+         <div class="row d-none" id="temp">
+            <div class="col-md-3 col-6 text-center template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/383/persistent-resource/santiago-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/142/persistent-resource/oslo-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/1882/persistent-resource/chicago-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+            <div class="col-md-3 col-6 template">
+                <img class="img-fluid" src="https://s3.resume.io/cdn-cgi/image/width=380,dpr=1,format=auto/uploads/local_template_image/image/2212/persistent-resource/rio-resume-templates.jpg" alt="">
+                <a href="resume.html" class="btn btn-sm btn-primary btn-custom position" style="font-family: Arial, Helvetica, sans-serif">Use this Template</a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-12 text-center mt-4">
+                <a href="" class="btn btn-custom" id="show-more">Load More</a>
+            </div>
+         </div>
+        
+        <div class="text-end mt-4">
+            <button type="submit" id="submit-back-gen" class="btn btn-custom">Previous</button>
+        </div>
+    </div>
+</div>
+
+ <script src="java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="printThis.js"></script>
+
+</body>
+</html>

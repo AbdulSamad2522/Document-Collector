@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Documents</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="jquery.qrcode.min.js"></script>
+    <script src="https://kit.fontawesome.com/4aed11ef63.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f1ea;
+            color: #333;
+        }
+        .resume-container {
+            background: #fff;
+            margin:  20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d2b48c;
+            border-radius: 8px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .header {
+            padding: 30px;
+            margin: 0;
+            background: #232426;
+            text-align: center;
+            padding-bottom: 20px;
+            color: #f4f1ea;
+            border-bottom: 2px solid #d2b48c;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #f4f1ea;
+            text-decoration: none;
+        }
+        .resume-body{
+            padding: 30px;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 5px;
+            color: #5a4d41;
+        }
+        .list-unstyled li {
+            margin-bottom: 5px;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body >
+<!-- Download Button -->
+<div class="text-center">
+    <button class="btn btn-custom mt-4" id="downloadResume">Download Documents as PDF</button>
+    <button class="btn btn-custom mt-4" id="GenerateResume">Generate Document</button>
+
+</div>
+<div class="resume-container" id="resume">
+    <div class="header">
+        <img src="https://via.placeholder.com/100" id="top-img" alt="Profile Picture">
+        <h1 id="big-name">Daryl Banks</h1>
+        <small id="title" class="text-uppercase">Web Developer</small>
+    </div>
+    <div class="row">
+        <div class="modal-box text-center col-lg-4 col-10 py-5">
+            <i class="fa-solid fa-xmark" id="cancel"></i>
+            <p>For dowload this amazing Doc Collector <br> You must be visit Protfolio. <br> <a href="https://abdulsamad2522.github.io/abdulsamad-profile/" class="text-decoration-none text-reset">AbdulSamad</a></p>
+            <div class="model-btn">
+                <a href="" id="visit" class="btn btn-custom">Visit Protfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="resume-body">
+        <div class="profile ">
+            <h3 class="section-title">Personal Info</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li id="name" ><strong>Full Name: </strong></li>
+                        <li id="contact"><strong>Contact: </strong></li>
+                        <li id="dob"><strong>Date of Birth: </strong></li>
+                        <li id="postal"><strong>Postal Address:</strong></li>
+                        <li id="state"><strong>State: </strong></li>
+                        <li id="degree"><strong>Degree: </strong></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li id="jname"><strong>Experties: </strong></li>
+                        <li id="cnic"><strong>User CNIC: </strong></li>
+                        <li id="email"><strong>Email: </strong></li>
+                        <li id="permanent"><strong>Permanent Address: </strong></li>
+                        <li id="country"><strong>Country: </strong></li>
+                        <li id="job"><strong>Current Job: </strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="education ">
+            <h3 class="section-title">Education</h3>
+            <h6 class="m-0"><strong>Matric</strong></h6>
+            <p class="m-0 d-block" id="matric-d">Class B Commercial Driver's License,Phoenix Driving School, Phoenix</p>
+               <small class="d-block mb-2" id="matric-date">August 2017</small>
+
+            <h6 class="m-0"><strong>Intermediate</strong></h6>
+            <p class="m-0 d-block" id="inter-d">Class B Commercial Driver's License, Phoenix Driving School, Phoenix</p>
+               <small class="d-block mb-2" id="inter-date">August 2017</small>
+
+               <h6 class="m-0"><strong>Becholer's</strong></h6>
+            <p class="m-0 d-block " id="bech-d">High School Diploma, Morris High School, Morris</p>
+               <small  id="bech-date">September 2013 – June 2017</small>
+        </div>
+
+        <div class="employment-history mt-4">
+            <h3 class="section-title">Employment History</h3>
+            <p id="employ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod officiis provident cum, dolores ut modi praesentium reprehenderit molestias deserunt temporibus suscipit pariatur iusto dolorem accusantium illum, corporis deleniti harum!</p>
+        </div>
+
+    
+        <div class="skills mt-4">
+            <h3 class="section-title">Documents</h3>
+            <ul class="list-unstyled list-group-horizontal list-group ">
+                <li>
+                    <img src="" id="doc-1" class="img-fluid" alt="">
+                </li>
+                <li class="ml-3">
+                    <img src="" class="img-fluid" alt="">
+                </li>
+                <li class="ml-3">
+                    <img src="" class="img-fluid" alt="">
+                </li>
+                <li class="ml-3">
+                    <img src="" class="img-fluid" alt="">
+                </li>
+                <li class="ml-3">
+                    <img src="" class="img-fluid" alt="">
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+<script src="java.js"></script>
+<script src="printThis.js"></script>
+</body>
+</html>

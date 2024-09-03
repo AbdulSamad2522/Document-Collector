@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="jquery.qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+</head>
+<body>
+<div class="container my-5">
+    <div class="form-container mx-auto">
+        <h2 class="text-center mb-4">Submit Document</h2>
+
+        <!-- Step Indicator -->
+        <div class="step-indicator d-none d-lg-block">
+            <div class="box-l">
+                <div><span class="bg-success" id="change">1</span> Personal Information</div>
+            <div><span class="bg-success" id="change">2</span> Education Information</div>
+            <div><span class="bg-primary" id="change">3</span> Submit Application</div>
+            <div><span id="change">4</span> Generate Code</div>
+            </div>
+        </div>
+        <div class="step-indicator d-block d-lg-none">
+            <div class="box d-flex justify-content-between">
+                <div style="font-size: 0.6rem;"><span class="bg-success" style="height: 25px;">1</span></div>
+                <div style="font-size: 0.6rem;"><span class="bg-success" style="height: 25px;">2</span></div>
+                <div style="font-size: 0.6rem;"><span class="bg-primary" style="height: 25px; padding-top: 2px;">3</span></div>
+                <div style="font-size: 0.6rem;"><span  style="height: 25px; padding-top: 2px;">4</span></div>
+                </div>
+        </div>
+
+        <!-- Form -->
+        <form>
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th class="d-none d-md-none">S.No</th>
+                        <th>Document Name</th>
+                        <th>View</th>
+                        <th>Upload File</th>
+                        <th>Uploaded</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="d-none d-md-none" style="border-right: 1px solid #17181993;text-align: center;">1</td>
+                        <td>Passport size photograph</td>
+                        <td><img src="" id="view-img" class="text-decoration-none form-label"></img></td>
+                        <td><input type="file" id="upload" class="form-control chooes"></td>
+                        <td class="text-center" id="symbol"><span class="status-complete text-danger">✗</span></td>
+                        <td  id="com">Incomplete</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-none" style="border-right: 1px solid #17181993;text-align: center;">2</td>
+                        <td>CNIC (Front Side)</td>
+                        <td><img src="" id="view-img2" class="form-label text-decoration-none"></img></td>
+                        <td><input type="file" id="upload2" class="form-control chooes"></td>
+                        <td class="text-center" id="symbol2"><span class="status-incomplete text-danger">✗</span></td>
+                        <td id="com2">Incomplete</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-none" style="border-right: 1px solid #17181993;text-align: center;">3</td>
+                        <td>SSC Mark Sheet (Part-II)</td>
+                        <td><img src="" id="view-img3" class="form-label text-decoration-none"></img></td>
+                        <td><input type="file" id="upload3" class="form-control chooes"></td>
+                        <td class="text-center" id="symbol3"><span class="status-incomplete text-danger">✗</span></td>
+                        <td id="com3">Incomplete</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-none" style="border-right: 1px solid #17181993;text-align: center;">4</td>
+                        <td>HSSC Mark Sheet (Part-II)</td>
+                        <td><img src="" id="view-img4" class="form-label text-decoration-none"></img></td>
+                        <td><input type="file" id="upload4" class="form-control chooes"></td>
+                        <td class="text-center" id="symbol4"><span class="status-incomplete text-danger">✗</span></td>
+                        <td id="com4">Incomplete</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-none" style="border-right: 1px solid #17181993;text-align: center;">5</td>
+                        <td>Becholer's Degree</td>
+                        <td><img src="" id="view-img5" class="form-label text-decoration-none"></img></td>
+                        <td><input type="file" id="upload5" class="form-control chooes"></td>
+                        <td class="text-center" id="symbol5"><span class="status-incomplete text-danger">✗</span></td>
+                        <td id="com5">Incomplete</td>
+                    </tr>
+                    <tr>
+                        <td class="d-none d-md-none" style="border-right: 1px solid #17181993;text-align: center;">6</td>
+                        <td>CV / Resume</td>
+                        <td><img src="" id="view-img6" class="form-label text-decoration-none"></img></td>
+                        <td><input type="file" id="upload6" class="form-control chooes"></td>
+                        <td class="text-center" id="symbol6"><span class="status-incomplete text-danger">✗</span></td>
+                        <td id="com6">Incomplete</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        
+            <div class="text-end mt-4">
+                <button type="submit" id="submit-back-sub" class="btn btn-custom">Previous</button>
+                <button type="submit" id="submit-next-sub" class="btn btn-custom">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+ <script src="java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="printThis.js"></script>
+
+</body>
+</html>
